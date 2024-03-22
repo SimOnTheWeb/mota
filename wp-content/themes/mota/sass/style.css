@@ -29,11 +29,11 @@ header {
   height: 80px;
   position: relative;
   left: 5%;
-  img {
-    height: 14px;
-    display: flex;
-    width: 216px;
-  }
+}
+.site-logo img {
+  height: 14px;
+  display: flex;
+  width: 216px;
 }
 
 nav {
@@ -41,10 +41,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  font-size: calc(0.5rem+1.5vw);
-  ul {
-    display: flex;
-    justify-content: space-between;
-    width: 30%;
-  }
+  font-size: 14px;
 }
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}/*# sourceMappingURL=style.css.map */
