@@ -5955,9 +5955,9 @@ function _admin_bar_bump_cb() {
 	$type_attr = current_theme_supports( 'html5', 'style' ) ? '' : ' type="text/css"';
 	?>
 	<style<?php echo $type_attr; ?> media="screen">
-	html { margin-top: 32px !important; }
+	html { margin-top: 0 !important; }
 	@media screen and ( max-width: 782px ) {
-	  html { margin-top: 46px !important; }
+	  html { margin-top: 0px !important; }
 	}
 	</style>
 	<?php
