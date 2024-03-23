@@ -1,0 +1,11 @@
+[22-Mar-2024 13:29:41 UTC] PHP Notice:  ob_end_flush(): Failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\mota\wp-includes\functions.php on line 5373
+[22-Mar-2024 13:29:41 UTC] PHP Notice:  ob_end_flush(): Failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\mota\wp-includes\functions.php on line 5373
+[23-Mar-2024 13:06:26 UTC] PHP Notice:  ob_end_flush(): Failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\mota\wp-includes\functions.php on line 5373
+[23-Mar-2024 13:06:26 UTC] PHP Notice:  ob_end_flush(): Failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\mota\wp-includes\functions.php on line 5373
+[23-Mar-2024 13:06:40 UTC] PHP Notice:  ob_end_flush(): Failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\mota\wp-includes\functions.php on line 5373
+[23-Mar-2024 13:06:40 UTC] PHP Notice:  ob_end_flush(): Failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\mota\wp-includes\functions.php on line 5373
+[23-Mar-2024 13:06:49 UTC] PHP Notice:  ob_end_flush(): Failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\mota\wp-includes\functions.php on line 5373
+[23-Mar-2024 13:06:49 UTC] PHP Notice:  ob_end_flush(): Failed to send buffer of zlib output compression (1) in C:\MAMP\htdocs\mota\wp-includes\functions.php on line 5373
+[23-Mar-2024 13:14:54 UTC] PHP Parse error:  syntax error, unexpected token "function" in C:\MAMP\htdocs\mota\wp-content\themes\mota\functions.php on line 19
+[23-Mar-2024 13:14:54 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\mota\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[23-Mar-2024 13:14:54 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\MAMP\htdocs\mota\wp-includes\class-wp-recovery-mode-email-service.php on line 368

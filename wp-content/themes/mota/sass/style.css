@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -31,9 +32,9 @@ header {
   left: 5%;
 }
 .site-logo img {
-  height: 14px;
   display: flex;
-  width: 216px;
+  max-height: 14px;
+  max-width: 216px;
 }
 
 nav {
@@ -41,10 +42,48 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  font-size: 14px;
+  font-size: calc(0.5rem + 0.7vw);
 }
 nav ul {
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: 350px;
+  position: relative;
+  right: 5%;
+}
+
+#icons {
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 720px) {
+  #icons {
+    display: block;
+    font-size: calc(0.5rem + 1.5vw);
+  }
+  #icons:before {
+    content: "☰";
+  }
+  .active #icons:before {
+    content: "✕";
+  }
+  nav ul {
+    position: fixed;
+    right: -100%;
+    top: 5%;
+    background-color: #e00000;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: 0.25s;
+  }
+  nav li {
+    padding: 3px 0;
+    font-size: 44px;
+    color: white;
+  }
+  .active ul {
+    left: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

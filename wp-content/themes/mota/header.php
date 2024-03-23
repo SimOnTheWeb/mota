@@ -17,12 +17,12 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo du site de Nathalie Mota">
             </a>
         </div>
-        <ul class="nav_menu">
+        <ul id="nav" class="nav_menu">
             <li><a href="" class="nav_link">Accueil</a></li>
             <li><a href="" class="nav_link">À propos</a></li>
             <li><a href="" class="nav_link">Contact</a></li>
         </ul>
-        <div class="icons"></div>
+        <div id="icons"></div>
     </nav>
 </header>
 
