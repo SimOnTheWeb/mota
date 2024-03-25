@@ -1,12 +1,22 @@
-// BURGER MENU
-console.log("burger");
-const links = document.querySelectorAll("nav li");
-icons.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav_menu");
+  const navLinks = document.querySelectorAll(".nav_link");
 
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("active");
+  hamburger.addEventListener("click", function () {
+    if (navMenu.style.display === "none") {
+      navMenu.style.display = "flex";
+      hamburger.textContent = "✖";
+    } else {
+      navMenu.style.display = "none";
+      hamburger.textContent = "☰";
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      navMenu.style.display = "none";
+      hamburger.textContent = "☰";
+    });
   });
 });

@@ -8,7 +8,7 @@ function theme_enqueue_styles_and_scripts() {
 
     // Chargement des scripts js du thème
     wp_enqueue_script('main', get_theme_file_uri() . '/js/main.js', array(), true);
-    wp_enqueue_script('burger', get_template_directory_uri() . '/js/burger.js', true);
+    wp_enqueue_script('burger', get_theme_file_uri() . '/js/burger.js',array(), true);
     
 }
 

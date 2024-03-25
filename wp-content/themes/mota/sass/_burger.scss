@@ -1,69 +1,87 @@
+$mobile: 720px;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 header {
-  height: 80px;
-}
-
-.site-logo {
-  display: flex;
-  align-items: center;
-  width: 30%;
-  height: 80px;
-  position: relative;
-  left: 5%;
-  img {
-    display: flex;
-    max-height: 14px;
-    max-width: 216px;
-  }
-}
-
-nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  font-size: calc(0.5rem + 0.7vw);
-  ul {
+  height: 80px;
+
+  nav {
     display: flex;
     justify-content: space-between;
-    width: 350px;
-    position: relative;
-    right: 5%;
-  }
-}
-
-#icons {
-  cursor: pointer;
-  display: none;
-}
-
-@media (max-width: 720px) {
-  #icons {
-    display: block;
-    font-size: calc(0.5rem + 1.5vw);
-  }
-  #icons:before {
-    content: "\2630";
-  }
-  .active #icons:before {
-    content: "\2715";
-  }
-
-  nav ul {
-    position: fixed;
-    right: -100%;
-    top: 5%;
-    background-color: #e00000;
-    height: 100%;
+    align-items: center;
     width: 100%;
-    text-align: center;
-    transition: 0.25s;
-  }
-  nav li {
-    padding: 3px 0;
-    font-size: 44px;
-    color: white;
-  }
-  .active ul {
-    left: 0;
+
+    .site-logo {
+      padding-left: 10%;
+
+      img {
+        width: 100%;
+        max-width: 200px;
+      }
+    }
+
+    .nav_menu {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 10%;
+
+      @media (max-width: $mobile) {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        right: -100%;
+        height: calc(100vh - 80px);
+        background-color: #e00000;
+        color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        transition: transform 0.5s ease-in-out;
+      }
+    }
+
+    .nav_link {
+      margin: 0 10px;
+
+      @media (max-width: $mobile) {
+        font-size: 44px;
+      }
+    }
+
+    a.nav_link {
+      @media (max-width: $mobile) {
+        color: white;
+      }
+    }
+
+    .hamburger {
+      display: none;
+
+      @media (max-width: $mobile) {
+        display: block;
+        padding-right: 40px;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      width: 350px;
+
+      @media (max-width: $mobile) {
+        flex-direction: column;
+        height: 250px;
+      }
+    }
   }
 }
