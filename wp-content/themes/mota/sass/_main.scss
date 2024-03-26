@@ -1,10 +1,18 @@
 @font-face {
-  font-family: "SpaceMonoRegular";
+  font-family: "SpaceMono";
   src: url("../assets/fonts/SpaceMono-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  src: url("../assets/fonts/SpaceMono-Bold.ttf");
+  font-weight: bold;
 }
 
 body {
-  font-family: "SpaceMonoRegular", sans-serif;
+  font-family: "SpaceMono", sans-serif;
+  font-weight: normal;
 }
 
 * {
@@ -25,4 +33,5 @@ a:visited {
 
 a:hover {
   color: black;
+  font-weight: bold;
 }

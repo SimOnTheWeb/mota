@@ -15,8 +15,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
-      navMenu.style.display = "none";
-      hamburger.textContent = "☰";
+      var width = window.innerWidth;
+      if (width <= 768) {
+        navMenu.style.display = "none";
+        hamburger.textContent = "☰";
+      }
     });
+  });
+
+  window.addEventListener("resize", function () {
+    var width = window.innerWidth;
+
+    if (width > 768) {
+      navMenu.style.display = "flex";
+      hamburger.style.display = "none";
+    } else {
+      navMenu.style.display = "none";
+      hamburger.style.display = "block";
+    }
   });
 });

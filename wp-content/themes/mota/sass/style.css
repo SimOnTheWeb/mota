@@ -1,9 +1,16 @@
 @font-face {
-  font-family: "SpaceMonoRegular";
+  font-family: "SpaceMono";
   src: url("../assets/fonts/SpaceMono-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SpaceMono";
+  src: url("../assets/fonts/SpaceMono-Bold.ttf");
+  font-weight: bold;
 }
 body {
-  font-family: "SpaceMonoRegular", sans-serif;
+  font-family: "SpaceMono", sans-serif;
+  font-weight: normal;
 }
 
 * {
@@ -24,6 +31,7 @@ a:visited {
 
 a:hover {
   color: black;
+  font-weight: bold;
 }
 
 body {
@@ -55,7 +63,24 @@ header nav .nav_menu {
   align-items: center;
   padding-right: 10%;
 }
-@media (max-width: 720px) {
+header nav .nav_link {
+  margin: 0 10px;
+}
+header nav a.nav_link {
+  color: black;
+  font-size: 16px;
+}
+header nav .hamburger {
+  display: none;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 350px;
+}
+@media (max-width: 768px) {
   header nav .nav_menu {
     position: fixed;
     top: 80px;
@@ -71,37 +96,17 @@ header nav .nav_menu {
     display: none;
     transition: transform 0.5s ease-in-out;
   }
-}
-header nav .nav_link {
-  margin: 0 10px;
-}
-@media (max-width: 720px) {
   header nav .nav_link {
     font-size: 44px;
   }
-}
-@media (max-width: 720px) {
   header nav a.nav_link {
     color: white;
+    font-size: 44px;
   }
-}
-header nav .hamburger {
-  display: none;
-}
-@media (max-width: 720px) {
   header nav .hamburger {
     display: block;
     padding-right: 40px;
   }
-}
-header nav ul {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-  width: 350px;
-}
-@media (max-width: 720px) {
   header nav ul {
     flex-direction: column;
     height: 250px;
