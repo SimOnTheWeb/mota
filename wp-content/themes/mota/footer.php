@@ -1,11 +1,15 @@
 <footer>
     <nav>
         <div class="footer_menu">
-            <ul>
-                <li><a href="#" class="footer_link">Mentions Légales</a></li>
-                <li><a href="#" class="footer_link">Vie Privée</a></li>
-                <li><p class="footer_text">TOUT DROITS RÉSERVÉS</p></li>
-            </ul>
+            <?php
+                // Utilisation de la fonction wp_nav_menu pour afficher le menu WP
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'second-menu',
+                        'container'      => 'false',
+                    )
+                );
+            ?>
         </div>
     </nav>
 </footer>

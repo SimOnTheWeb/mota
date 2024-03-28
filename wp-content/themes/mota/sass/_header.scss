@@ -1,5 +1,7 @@
-// BURGER //
+// Variables
+$mobile: 768px;
 
+// Styles
 body {
   margin: 0;
   padding: 0;
@@ -16,7 +18,7 @@ header {
     align-items: center;
     width: 100%;
 
-    .site-logo {
+    .site_logo {
       padding-left: 10%;
 
       img {
@@ -25,68 +27,104 @@ header {
       }
     }
 
+    .hamburger {
+      display: none; // Masquer le burger menu par défaut
+      cursor: pointer;
+      position: relative; // Positionner les éléments enfants de façon absolue
+
+      .bar {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        transition: all 0.3s ease-in-out;
+        background-color: black;
+      }
+    }
+
     .nav_menu {
       display: flex;
       justify-content: flex-end;
       align-items: center;
       padding-right: 10%;
-    }
 
-    .nav_link {
-      margin: 0 10px;
-    }
+      a {
+        margin: 0 10px;
+        color: black;
+        font-size: 16px;
+        display: flex;
+      }
 
-    a.nav_link {
-      color: black;
-      font-size: 16px;
-    }
-
-    .hamburger {
-      display: none;
-    }
-
-    ul {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      align-items: center;
-      width: 350px;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        width: 400px;
+      }
     }
 
     @media (max-width: $mobile) {
       .nav_menu {
-        position: fixed;
-        top: 80px;
+        position: fixed; // Position absolue pour le positionner au-dessus du header
+        top: -100%; // Le faire démarrer hors de l'écran vers le haut
         left: 0;
-        width: 100%;
-        right: -100%;
-        height: calc(100vh - 80px);
-        background-color: #e00000;
-        color: white;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        display: none;
-        transition: transform 0.5s ease-in-out;
-      }
-
-      .nav_link {
-        font-size: 44px;
-      }
-
-      a.nav_link {
-        color: white;
-        font-size: 44px;
+        width: 100%;
+        height: 100%;
+        background-color: #e00000; // Fond rouge même lorsque le menu est fermé
+        opacity: 0; // Commence avec une opacité nulle
+        pointer-events: none; // Empêcher les clics sur le menu invisible
+        transition: top 0.7s ease-in-out, opacity 1s ease; // Transition pour le déplacement de haut en bas et l'effet de fondu
       }
 
       .hamburger {
         display: block;
-        padding-right: 40px;
+        width: 40px;
+        height: 30px;
+        cursor: pointer;
+        position: relative;
+        margin-right: 10%;
+
+        &.active {
+          .bar:nth-child(2) {
+            opacity: 0;
+          }
+
+          .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+          }
+
+          .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+          }
+        }
       }
 
-      ul {
+      .nav_menu.active {
+        top: 80px;
+        opacity: 1;
+        pointer-events: auto; // Activer les clics sur le menu visible
+      }
+
+      // Styles pour les liens du menu burger
+      .nav_menu ul {
         flex-direction: column;
-        height: 250px;
+        justify-content: space-between;
+        align-items: center;
+        height: 300px;
+      }
+
+      .nav_menu a {
+        color: white; // Couleur blanche pour les liens
+        font-size: 44px; // Taille de police augmentée
+      }
+
+      // Effet de transition pour le menu burger
+      .nav_menu,
+      .hamburger {
+        transition: top 1s ease, opacity 1s ease;
       }
     }
   }

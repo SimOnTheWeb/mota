@@ -11,18 +11,26 @@
 
 <header>
     <nav>
-        <div class="site-logo">
+        <div class="site_logo">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo du site de Nathalie Mota">
             </a>
         </div>
-        <div class="hamburger">☰</div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <div class="nav_menu">
-            <ul>
-                <li><a href="#" class="nav_link">Accueil</a></li>
-                <li><a href="#" class="nav_link">À propos</a></li>
-                <li><a href="#" class="nav_link">Contact</a></li>
-            </ul>
+            <?php
+                // Utilisation de la fonction wp_nav_menu pour afficher le menu WP
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'main-menu',
+                        'container'      => 'false',
+                    )
+                );
+            ?>
         </div>
     </nav>
 </header>
